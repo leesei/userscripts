@@ -1,12 +1,16 @@
 // ==UserScript==
 // @name         Clean URL Query
 // @namespace    https://github.com/leesei/userscripts
-// @version      1.0
+// @version      1.1
 // @description  Trim tracking query params from URL
 // @author       leesei@gmail.com
 // @supportURL   https://github.com/leesei/userscripts/issues
 // @match        http*://detail.tmall.com/item.htm*
+// @match        http*://*.tmall.com/shop/view_shop.htm
 // @match        http*://item.taobao.com/item.htm*
+// @match        http*://*.taobao.com/shop/view_shop.htm
+// @match        http*://*.computerworld.com/*
+// @match        http*://*.infoworld.com/*
 // @run-at       document-start
 // @grant        GM_log
 // @grant        GM_info
@@ -43,6 +47,9 @@ function query2json(querystring) {
   var queries = query2json(location.search);
   log("debug", JSON.stringify(queries));
   if (Object.keys(queries).length > 1) {
-    location.replace(location.pathname + "?id=" + queries.id);
+    location.replace(
+      // retain id for Taobao items
+      location.pathname + (queries.id ? "?id=" + queries.id : "")
+    );
   }
 })();
