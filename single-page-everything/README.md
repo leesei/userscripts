@@ -1,7 +1,7 @@
-## Single Page Everything
+# Single Page Everything
 
 Some websites split their contents across multiple pages, probably to get more ads to be served.  
-This user script tries to load the single page version (if available).  
+This user script tries to load the single page version (if available).
 
 Contributions are welcome.
 
@@ -13,3 +13,10 @@ Append `/printable` in url for single page layout.
 
 ~~~Toms' Hardware~~~ (no longer works)  
 Replace `/reviews/` to `/print/` in url for single page layout.
+
+[Adafruit Learning System](https://learn.adafruit.com/)
+Append `?view=all` in url for single page layout.
+
+[Ars Technica](https://arstechnica.com/)
+Append `?amp=1` in url for single page layout.
+
