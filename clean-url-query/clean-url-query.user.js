@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clean URL Query
 // @namespace    https://github.com/leesei/userscripts
-// @version      1.3.1
+// @version      1.3.2
 // @description  Trim tracking query params from URL
 // @author       leesei@gmail.com
 // @supportURL   https://github.com/leesei/userscripts/issues
@@ -9,6 +9,7 @@
 // @match        http*://*.tmall.com/shop/view_shop.htm
 // @match        http*://item.taobao.com/item.htm*
 // @match        http*://*.taobao.com/shop/view_shop.htm
+// @match        http*://*.carousell.com/p/*
 // @match        http*://*.computerworld.com/*
 // @match        http*://*.networkworld.com/*
 // @match        http*://*.infoworld.com/*
