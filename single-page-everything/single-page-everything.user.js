@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Single Page Everything
 // @namespace    https://github.com/leesei/userscripts
-// @version      1.3
+// @version      1.4
 // @description  Load single page version of page for supported sites
 // @author       leesei@gmail.com
 // @supportURL   https://github.com/leesei/userscripts/issues
 // @match        http*://*.howstuffworks.com/*.htm
 // @match        http*://www.anandtech.com/show/*
-// @match        http*://www.tomshardware.com/reviews/*.html
+// match        http*://www.tomshardware.com/reviews/*.html
 // @match        http*://learn.adafruit.com/*
 // @match        http*://learn.sparkfun.com/tutorials/*
 // @match        http*://arstechnica.com/*
@@ -50,10 +50,10 @@ function query2json(querystring) {
     location.replace(location.pathname, location.pathname + "/printable/");
   } else if (location.hostname.includes("anandtech")) {
     location.replace(location.pathname.replace("/show", "/print"));
-  } else if (location.hostname.includes("tomshardware")) {
-    location.replace(
-      location.pathname.replace("/reviews", "/print").replace(",", ",reviews-")
-    );
+//   } else if (location.hostname.includes("tomshardware")) {
+//     location.replace(
+//       location.pathname.replace("/reviews", "/print").replace(",", ",reviews-")
+//     );
   } else if (location.hostname.includes("adafruit")) {
     // only handle articles, excludes category
     if (location.pathname.includes("/category/", 1)) return;
