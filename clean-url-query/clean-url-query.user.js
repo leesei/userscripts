@@ -25,14 +25,15 @@ function log(level, text) {
 
 function query2json(querystring) {
   // remove any preceding url and split
-  var queries = querystring.substring(querystring.indexOf("?") + 1).split("&");
-  var params = {},
-    pair,
+  const queries = querystring
+    .substring(querystring.indexOf("?") + 1)
+    .split("&");
+  const params = {},
     d = decodeURIComponent;
   // match and parse
-  for (var i = queries.length - 1; i >= 0; i--) {
+  for (let i = queries.length - 1; i >= 0; i--) {
     if (queries[i].length === 0) continue;
-    pair = queries[i].split("=");
+    const pair = queries[i].split("=");
     params[d(pair[0])] = d(pair[1]);
   }
 
@@ -40,8 +41,8 @@ function query2json(querystring) {
 }
 
 function json2query(json) {
-  var query = Object.keys(json)
-    .map(function(key) {
+  const query = Object.keys(json)
+    .map(function (key) {
       return encodeURIComponent(key) + "=" + encodeURIComponent(json[key]);
     })
     .join("&");
@@ -71,7 +72,7 @@ function string2Boolean(string, defaultTrue) {
   }
 }
 
-(function() {
+(function () {
   "use strict";
 
   log(
@@ -79,7 +80,7 @@ function string2Boolean(string, defaultTrue) {
     ">>> [" + GM_info.script.namespace + "] " + GM_info.script.name + " <<<"
   );
 
-  var queries = query2json(location.search);
+  const queries = query2json(location.search);
   log("debug", "queries: " + JSON.stringify(queries));
 
   if (
@@ -90,18 +91,18 @@ function string2Boolean(string, defaultTrue) {
   }
 
   // retain these query params
-  var WHITE_LIST = [
+  const WHITE_LIST = [
     "id", // for taobao items
-    "page" // for article pages
+    "page", // for article pages
   ];
-  var copy = Object.assign({}, queries);
-  WHITE_LIST.forEach(key => delete copy[key]);
+  const copy = Object.assign({}, queries);
+  WHITE_LIST.forEach((key) => delete copy[key]);
   log("debug", "copy: " + JSON.stringify(copy));
 
   // remove non-whitelisted queries
   if (Object.keys(copy).length) {
-    var _q = {};
-    WHITE_LIST.forEach(key => {
+    const _q = {};
+    WHITE_LIST.forEach((key) => {
       if (queries[key]) _q[key] = queries[key];
     });
     log("debug", "_q: " + JSON.stringify(_q));
