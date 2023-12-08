@@ -26,6 +26,12 @@ function log(level, text) {
   );
 
   setTimeout(() => {
+    const errorTable = document.querySelector("table.errortab");
+    if (errorTable) {
+      log("info", "error table found");
+      return;
+    }
+
     const downloadButton = document.querySelector(
       "input[type=submit][value=DOWNLOAD i]"
     );
