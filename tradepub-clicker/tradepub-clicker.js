@@ -27,7 +27,7 @@ function log(level, text) {
 
   setTimeout(() => {
     const downloadButton = document.querySelector(
-      "input[type=submit][value=DOWNLOAD]"
+      "input[type=submit][value=DOWNLOAD i]"
     );
     log("debug", "button: " + downloadButton);
     if (downloadButton) {
