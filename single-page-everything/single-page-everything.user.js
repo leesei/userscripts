@@ -4,6 +4,7 @@
 // @version      2.0.0
 // @description  Load single page version of page for supported sites
 // @author       leesei@gmail.com
+// @license      MIT
 // @supportURL   https://github.com/leesei/userscripts/issues
 // @match        http*://*.howstuffworks.com/*
 // @match        http*://www.anandtech.com/show/*

@@ -4,6 +4,7 @@
 // @version      1.3.2
 // @description  Trim tracking query params from URL
 // @author       leesei@gmail.com
+// @license      MIT
 // @supportURL   https://github.com/leesei/userscripts/issues
 // @match        http*://detail.tmall.com/item.htm*
 // @match        http*://*.tmall.com/shop/view_shop.htm

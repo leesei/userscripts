@@ -4,6 +4,7 @@
 // @version      1.0.0
 // @description  Click the download button on TradePub automatically, so you don't have to
 // @author       leesei@gmail.com
+// @license      MIT
 // @supportURL   https://github.com/leesei/userscripts/issues
 // @match        http*://*.tradepub.com/*
 // @run-at       document-start
