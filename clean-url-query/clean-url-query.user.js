@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clean URL Query
 // @namespace    https://github.com/leesei/userscripts
-// @version      1.3.3
+// @version      1.3.4
 // @description  Trim tracking query params from URL
 // @author       leesei@gmail.com
 // @license      MIT
@@ -14,6 +14,7 @@
 // @match        http*://*.computerworld.com/*
 // @match        http*://*.networkworld.com/*
 // @match        http*://*.infoworld.com/*
+// @match        http*://*.itprotoday.com/*
 // @match        http*://*.makeuseof.com/*
 // @run-at       document-start
 // @grant        GM_log
