@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clean URL Query
 // @namespace    https://github.com/leesei/userscripts
-// @version      1.3.4
+// @version      1.3.5
 // @description  Trim tracking query params from URL
 // @author       leesei@gmail.com
 // @license      MIT
@@ -96,6 +96,7 @@ function string2Boolean(string, defaultTrue) {
   // retain these query params
   const WHITE_LIST = [
     "id", // for taobao items
+    "skuId", // for taobao items
     "page", // for article pages
   ];
   const copy = Object.assign({}, queries);
